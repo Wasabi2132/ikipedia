@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 240px;
+      font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+      background: #fff0f5;
+      padding: 20px 16px 18px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 13px;
+      color: #c0396e;
+      margin-bottom: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    .subtitle {
+      font-size: 10px;
+      color: #d4789a;
+      margin-bottom: 16px;
+    }
+
+    .toggle-btn {
+      width: 100%;
+      padding: 12px 0;
+      border: none;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      letter-spacing: 0.05em;
+    }
+
+    .toggle-btn.off {
+      background: linear-gradient(135deg, #ff85b3, #ff4d94);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(255,77,148,0.35);
+    }
+
+    .toggle-btn.off:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(255,77,148,0.45);
+    }
+
+    .toggle-btn.on {
+      background: #e8e8e8;
+      color: #999;
+      box-shadow: none;
+    }
+
+    .status {
+      margin-top: 12px;
+      font-size: 11px;
+      color: #c0396e;
+      min-height: 16px;
+    }
+
+    .status.active::before {
+      content: "✦ ";
+    }
+
+    .warning {
+      margin-top: 10px;
+      font-size: 9px;
+      color: #b0b0b0;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>❤うぃきぺでぃあ❤</h1>
+  <div class="subtitle">おにーさん、うぃきぺでぃあがないと<br>なぁーんにもしらないんだぁ❤<br>ざぁーこざぁーこ❤</div>
+
+  <button id="toggleBtn" class="toggle-btn off">❤わからせる❤</button>
+
+  <div id="status" class="status"></div>
+  <div class="warning">※ Wikipedia以外のサイトでは動作しないよ。</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
